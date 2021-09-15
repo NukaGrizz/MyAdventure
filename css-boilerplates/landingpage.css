@@ -77,8 +77,9 @@ body.my-login-page {
 }
 
 .input-style {
-    border-radius: 12px;
+	border-radius: 12px;
     background: lightgray;
+	
 }
 
 p {
@@ -100,6 +101,15 @@ max-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.lower-form {
+	margin-bottom: 50px; 
+}
+
+.g-verify {
+	height: 60px;
 }
 /* 
 .login-button-container:focus {
