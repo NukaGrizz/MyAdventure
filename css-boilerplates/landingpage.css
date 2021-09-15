@@ -1,0 +1,111 @@
+html,body {
+	height: 100%;
+}
+
+body.my-login-page {
+    background-image: url("../img/depositphotos_61708349-stock-photo-collage-happy-people.jpg"), linear-gradient(#eb01a5, #d13531); /* W3C */
+	background-color: #f7f9fb;
+	font-size: 14px;
+}
+
+
+.my-login-page .card {
+	border-color: transparent;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.my-login-page .card.fat {
+	padding: 30px;
+}
+
+
+
+
+.my-login-page .card .card-title {
+	margin-bottom: 30px;
+    color: -webkit-linear-gadient(rgba(248, 104, 0, 1),
+    rgba(255, 230, 3, 1));
+}
+
+.my-login-page .form-control {
+	border-width: 2.3px;
+}
+
+.my-login-page .form-group label {
+	width: 100%;
+}
+
+.my-login-page .btn.btn-block {
+	padding: 12px 10px;
+}
+
+.my-login-page .footer {
+	margin: 40px 0;
+	color: #888;
+	text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+	.my-login-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.my-login-page .card.fat {
+		padding: 0;
+	}
+
+	.my-login-page .card.fat .card-body {
+		padding: 15px;
+	}
+}
+
+.custom-width {
+    max-width: 550px !important;
+}
+
+.header-text {
+    font-size: 67px;
+    font-family: Fugaz none;
+    text-align: center;
+    background: -webkit-linear-gradient(rgba(248, 104, 0, 1), rgba(255, 230, 3, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Fugaz One', sans-serif;
+}
+
+.input-style {
+    border-radius: 12px;
+    background: lightgray;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.login-button {
+background: #F86800;
+
+border-radius: 12px;
+max-width: 200px; 
+}
+
+.login-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+.login-button-container:focus {
+    background-color: white
+}
+
+div:focus {
+    background-color:red;
+} */
