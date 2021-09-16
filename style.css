@@ -1,0 +1,130 @@
+.button1 {
+border-radius: 30px;
+  background-color: darkgray;
+
+      }
+
+
+.button2 {
+  border-radius: 30px;
+  background-color: darkgray;
+    
+}
+.button3 {
+   border-radius: 30px;
+   
+background-color: darkgray;}
+
+.button4 {
+  border-radius: 30px;
+background-color: darkgray;}
+
+.button5 {
+  border-radius: 30px;
+  background-color: darkgray;
+}
+
+.buttons {
+margin-left: auto;
+margin-right: auto;
+text-align:center;
+justify-content: space-around;
+justify-content: space-evenly;
+width: 40em;
+padding-top: 40px
+}
+.border border-{
+    border-radius: 60px;
+}
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: grey;
+    margin: 0;
+    display: inline;
+    text-shadow: 00 0 10px rgba (0,0,0,0.5);
+  }
+  header a {
+    text-decoration: none;
+    
+  }
+  
+  header nav {
+    float: center;
+    margin: 7px 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+  }
+  header nav ul li a:hover {
+    padding: 10px 15px ;
+    font-weight: lighter;
+    font-size: 22px;
+    text-shadow: 0 0 10px rga(0,0,0,0.5);
+  }
+  .left-box {
+    width: 240px;
+    height: 895px;
+  
+   background-color: lightblue;
+  }
+
+  .right-box {
+    width: 240px;
+    height: 895px;
+   
+   background-color: lightblue; 
+  
+
+  }
+  .middle-box {
+    width: 775px;
+    height: 897px;
+  
+  
+    border-top-style: solid;
+    border-radius: 10px;
+    border-width: 30px ;
+    border-color: gray;
+    border-left-style: solid;
+    border-left-width: 10px;
+    border-right-style:solid;
+    border-right-width: 10px;
+    
+    
+    
+    
+    
+  }
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+  }
+  .buttonpost  {
+    border-radius: 30px;
+    text-align: right;
+    
+    background-color: orange;
+  }
+  .fa-fa-thumbs-up {
+    font-size: 200%;
+  }  
+  .comments {
+    text-align: center;
+  }
+  .p {
+text-align: top;
+  }
+  /*for tablets*/
+  
+
+
+
+  /*for desktop*/
+
+
+  
