@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS newsfeed_db;
+DROP DATABASE IF EXISTS my_adventures_db;
 
-CREATE DATABASE newsfeed_db;
+CREATE DATABASE my_adventures_db;
