@@ -1,33 +1,64 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
-  </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
 
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
-  </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100 custom-width">
+					<div class="card fat">
+						<main class="card-body">
+							<h4 class="card-title header-text">Adventure <br> is <br> Waiting </h4>
+							<p>
+							 Join the storm and boost your adventure
+							</p>
+						
+							<form class="login-form" >
+								<div tabindex="1" class="form-group">
+									<label for="email-login">E-Mail Address</label>
+									<input id="email-login" type="text" class="form-control input-style" name="email" value="" required autofocus>
+									<div class="invalid-feedback">
+										Email is invalid
+									</div>
+								</div>
 
+								<div tabindex="2" class="form-group">
+									<label for="password-login">Password
+										<a href="forgot.html" class="float-right">
+											Forgot Password?
+										</a>
+									</label>
+									<input id="password-login" type="password" class="form-control input-style" name="password" required data-eye>
+								    <div class="invalid-feedback">
+								    	Password is required
+							    	</div>
+								</div>
+
+								{{!-- <div class="form-group">
+									<div class="custom-checkbox custom-control">
+										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
+										<label for="remember" class="custom-control-label">Remember Me</label>
+									</div>
+								</div> --}}
+
+								<div tabindex="3"class="form-group m-0 login-button-container">
+									<button type="submit" class="btn btn-primary btn-block login-button">
+										Login
+									</button>
+								</div>
+								<div class="mt-4 text-center">
+									Don't have an account? <a href="/signup">Create One</a>
+								</div>
+							</form>
+						</main>
+					</div>
+					<div class="footer">
+						
+					</div>
+				
+			</div>
+		</div>
+	</section>
+
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
 <script src="/javascript/login.js"></script>
+
+</body>

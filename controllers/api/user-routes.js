@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ['id', 'title', 'post_url', 'created_at']
+        attributes: ['id', 'title', 'post_text', 'created_at']
       },
       {
         model: Comment,
@@ -56,7 +56,11 @@ router.get('/:id', (req, res) => {
 
 //post api/users/
 router.post('/', (req, res) => {
+<<<<<<< HEAD
   // expects {username: 'djiri4', email: 'gmidgley4@weather.com', password: 'password123'}
+=======
+  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234', freinds_ids: '1 2 3 4 5 6 7 8'}
+>>>>>>> acfc8bc21fabe1308513f73e83b99bb9905a541f
   User.create({
     username: req.body.username,
     email: req.body.email,
