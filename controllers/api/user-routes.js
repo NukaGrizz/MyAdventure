@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment, Vote } = require('../../models');
 
-// get all users
+// get api/users/
 router.get('/', (req, res) => {
   User.findAll({
     attributes: { exclude: ['password'] }
@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
+//get api/users/:id
 router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
@@ -53,8 +54,9 @@ router.get('/:id', (req, res) => {
     });
 });
 
+//post api/users/
 router.post('/', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  // expects {username: 'djiri4', email: 'gmidgley4@weather.com', password: 'password123'}
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -75,8 +77,9 @@ router.post('/', (req, res) => {
     });
 });
 
+//post api/users/login
 router.post('/login', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+  // expects {username: 'djiri4', email: 'gmidgley4@weather.com', password: 'password123'
   User.findOne({
     where: {
       email: req.body.email
@@ -104,6 +107,7 @@ router.post('/login', (req, res) => {
   });
 });
 
+//post api/users/logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -115,8 +119,9 @@ router.post('/logout', (req, res) => {
   }
 });
 
+//put api/users/1
 router.put('/:id', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  // expects {username: 'djiri4', email: 'gmidgley4@weather.com', password: 'password1234'}
 
   // pass in req.body instead to only update what's passed through
   User.update(req.body, {
@@ -138,6 +143,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+//delete api/users/1
 router.delete('/:id', (req, res) => {
   User.destroy({
     where: {
