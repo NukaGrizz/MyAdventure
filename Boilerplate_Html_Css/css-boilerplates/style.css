@@ -64,24 +64,18 @@ header h1 {
     text-shadow: 0 0 10px rga(0,0,0,0.5);
   }
   .left-box {
-    width: 240px;
-    height: 895px;
-  
+    min-height: 100px;
    background-color: lightblue;
   }
 
   .right-box {
-    width: 240px;
-    height: 895px;
-   
+    min-height: 100px;
    background-color: lightblue; 
   
-
   }
+
   .middle-box {
-    width: 775px;
-    height: 897px;
-  
+    min-height: 400px;
   
     border-top-style: solid;
     border-radius: 10px;
@@ -91,10 +85,6 @@ header h1 {
     border-left-width: 10px;
     border-right-style:solid;
     border-right-width: 10px;
-    
-    
-    
-    
     
   }
   .container {
@@ -107,7 +97,9 @@ header h1 {
   .buttonpost  {
     border-radius: 30px;
     text-align: right;
-    
+    background-color: #6F6F6F;
+  }
+  .buttonpost:hover {
     background-color: orange;
   }
   .fa-fa-thumbs-up {
