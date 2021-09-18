@@ -1,18 +1,18 @@
-<form class="login-form">
+{{!-- <form class="my-login-page">
   <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
+    <label for="email">email:</label>
+    <input type="text" id="email" />
   </div>
   <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
+    <label for="password">password:</label>
+    <input type="password" id="password" />
   </div>
   <div>
     <button type="submit">login</button>
   </div>
-</form>
+</form> --}}
 
-<form class="signup-form">
+{{!-- <form class="signup-form">
   <div>
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
@@ -28,6 +28,68 @@
   <div>
     <button type="submit">signup</button>
   </div>
-</form>
+</form> --}}
 
 <script src="/javascript/login.js"></script>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100 custom-width">
+					<div class="card fat">
+						<main class="card-body">
+							<h4 class="card-title header-text">Adventure <br> is <br> Waiting </h4>
+							<p>
+							 Join the storm and boost your adventure
+							</p>
+						
+							<form method="POST" class="my-login-validation" novalidate="">
+								<div tabindex="1" class="form-group">
+									<label for="email">E-Mail Address</label>
+									<input id="email" type="text" class="form-control input-style" name="email" value="" required autofocus>
+									<div class="invalid-feedback">
+										Email is invalid
+									</div>
+								</div>
+
+								<div tabindex="2" class="form-group">
+									<label for="password">Password
+										<a href="forgot.html" class="float-right">
+											Forgot Password?
+										</a>
+									</label>
+									<input id="password" type="password" class="form-control input-style" name="password" required data-eye>
+								    <div class="invalid-feedback">
+								    	Password is required
+							    	</div>
+								</div>
+
+								<div class="form-group">
+									<div class="custom-checkbox custom-control">
+										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
+										<label for="remember" class="custom-control-label">Remember Me</label>
+									</div>
+								</div>
+
+								<div tabindex="3"class="form-group m-0 login-button-container">
+									<button type="submit" class="btn btn-primary btn-block login-button">
+										Login
+									</button>
+								</div>
+								<div class="mt-4 text-center">
+									Don't have an account? <a href="register.html">Create One</a>
+								</div>
+							</form>
+						</main>
+					</div>
+					<div class="footer">
+						
+					</div>
+				
+			</div>
+		</div>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/my-login.js"></script>
+</body>
