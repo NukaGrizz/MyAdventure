@@ -90,6 +90,11 @@ User.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
+
+        user_img_url: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
     },
     {
         hooks: {
