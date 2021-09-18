@@ -1,0 +1,82 @@
+{{!-- 
+<form class="signup-form">
+  <div>
+    <label for="username-signup">username:</label>
+    <input type="text" id="username-signup" />
+  </div>
+  <div>
+    <label for="email-signup">email:</label>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
+    <label for="password-signup">password:</label>
+    <input type="password" id="password-signup" />
+  </div>
+  <div>
+    <button type="submit">signup</button>
+  </div>
+</form> --}}
+<body class="my-login-page">
+  <section class="h-100">
+    <div class="container h-100 custom-width">
+      <div class="card fat">
+        <main class="card-body">
+            <h4 class="card-title header-text">Adventure</h4>
+
+            <form method="POST" class="signup-form my-login-validation" onsubmit="return submitUserForm();">
+                
+                <div  class="form-group">
+                    <label for="username-signup">New Username:</label>
+                    <input id="username-signup" type="text" class="form-control input-style" name="password" required data-eye>
+                    <div class="invalid-feedback">
+                        Password is required
+                    </div>
+                </div>
+
+                <div class="form-group lower-form">
+                    <label for="email-signup">New User E-Mail:</label>
+                    <input id="email-signup" type="text" class="form-control input-style" name="email" value="" required autofocus>
+                    <div class="invalid-feedback">
+                        Email is invalid
+                    </div>
+                </div>
+
+                <div  class="form-group">
+                    <label for="password-signup">New User Password:</label>
+                    <input id="password-signup" type="password" class="form-control input-style" name="password" required data-eye>
+                    <div class="invalid-feedback">
+                        Password is required
+                    </div>
+                </div>
+
+                <div tabindex="1" class="form-group">
+                    <label for="passwrd-sign">Confirm Password:</label>
+                    <input id="passConfirm" type="password" class="form-control input-style" name="email" value="" required data-eye>
+                    <div class="invalid-feedback">
+                        Password does not match
+                    </div>
+                </div>
+
+                <div tabindex="2" class="form-group d-flex justify-content-center">
+                  <div class="g-recaptcha" data-sitekey="6LfX3HQcAAAAAGf1PGXubt2oJU8vvs3-LLq9fce2" data-callback="6LfX3HQcAAAAAOUpfKgUjq-imyhzUhcWqv-UbSf8"></div>
+                  <div id="g-recaptcha-error"></div>
+                </div>
+
+                <div tabindex="3"class="form-group m-0 login-button-container">
+                    <button type="submit" name="submit" value="Submit" class="btn btn-primary btn-block login-button">
+                        Register
+                    </button>
+                </div>
+                <div class="mt-4 text-center">
+                    Already have an account? <a href="/login">Click here to sign in</a>
+                </div>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src="/javascript/login.js"></script>
+</body>
