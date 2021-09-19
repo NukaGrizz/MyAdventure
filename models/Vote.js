@@ -7,9 +7,15 @@ Vote.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true
+    }, 
+    negative_positive_vote: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
     },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -34,4 +40,4 @@ Vote.init(
   }
 );
 
-module.exports = Vote;
+module.exports = Vote
