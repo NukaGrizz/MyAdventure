@@ -58,7 +58,6 @@ router.get('/:id', (req, res) => {
 //post api/users/
 router.post('/', (req, res) => {
   // expects {username: 'djiri4', email: 'gmidgley4@weather.com', password: 'password123'}
-
   User.create({
     username: req.body.username,
     email: req.body.email,
