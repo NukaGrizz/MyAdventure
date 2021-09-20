@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const cloudinary = require("cloudinary");
 
 require('dotenv').config();
 
@@ -11,4 +12,10 @@ const sequelize = process.env.JAWSDB_URL
       port: 3306
     });
 
-module.exports = sequelize;
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET
+});
+
+module.exports = sequelize, cloudinary;

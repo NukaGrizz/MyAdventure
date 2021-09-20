@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const cloudinary = require('../../config/connection')
 const { User, Post, Comment, Vote } = require('../../models');
 
 // get api/users/
@@ -56,7 +57,7 @@ router.get('/:id', (req, res) => {
 
 //post api/users/
 router.post('/', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+  // expects {username: 'djiri4', email: 'gmidgley4@weather.com', password: 'password123'}
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -119,9 +120,10 @@ router.post('/logout', (req, res) => {
   }
 });
 
+
 //put api/users/1
 router.put('/:id', (req, res) => {
-  // expects {username: 'djiri4', email: 'gmidgley4@weather.com', password: 'password1234'}
+  // expects {username: 'djiri4', email: 'gmidgley4@weather.com', password: 'password1234', "user_img_url":"https://res.cloudinary.com/myadventureteam/image/upload/v1632003645/zbbqwugj3r3nlbumyj7g.png"}
 
   // pass in req.body instead to only update what's passed through
   User.update(req.body, {
@@ -142,6 +144,7 @@ router.put('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 //delete api/users/1
 router.delete('/:id', (req, res) => {
