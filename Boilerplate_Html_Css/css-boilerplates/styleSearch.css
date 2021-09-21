@@ -129,6 +129,11 @@
 
 }
 
+.form-control-file, .form-control-range {
+    display: block;
+    width: 100%;
+}
+
 
 /*helper classes*/
 
