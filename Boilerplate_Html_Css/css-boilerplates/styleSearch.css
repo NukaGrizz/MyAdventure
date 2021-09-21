@@ -28,6 +28,10 @@
     background-color: rgba(196, 196, 196, 1);
 }
 
+.search-result-container.user-info{
+    padding: 10px 30px 0 30px;
+}
+
 .individual-container-post {
     width: 100%;
     border-radius: 25px;
@@ -93,7 +97,7 @@
 }
 /*Navigation and Search*/
 .col-sm-6 {
-    border:1px solid grey;
+    /*border:1px solid grey;*/
     padding:15px;
 }
 
@@ -123,6 +127,11 @@
     border-color: black;
     align-content: center;
 
+}
+
+.form-control-file, .form-control-range {
+    display: block;
+    width: 100%;
 }
 
 

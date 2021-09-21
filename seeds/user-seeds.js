@@ -13,7 +13,8 @@ const userdata = [
     employment: 'healthcare',
     relationship_status: 'married',
     hobbies: 'photography, cycling',
-    friends_ids: '2, 3, 4'
+    friends_ids: '2, 3, 4',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'jwilloughway1',
@@ -27,6 +28,7 @@ const userdata = [
     relationship_status: 'married',
     hobbies: 'painting',
     friends_ids: '3, 4, 5',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'iboddam2',
@@ -40,6 +42,7 @@ const userdata = [
     relationship_status: 'single',
     hobbies: 'hiking, dancing, eating',
     friends_ids: '4, 5, 6',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'dstanmer3',
@@ -53,6 +56,7 @@ const userdata = [
     relationship_status: 'single',
     hobbies: '',
     friends_ids: '9',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'djiri4',
@@ -66,6 +70,7 @@ const userdata = [
     relationship_status: 'married',
     hobbies: 'boating, scuba diving',
     friends_ids: '7, 8',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'msprague5',
@@ -79,6 +84,7 @@ const userdata = [
     relationship_status: '',
     hobbies: 'gym, listening to music, running',
     friends_ids: '1, 2, 3',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'mpergens6',
@@ -92,6 +98,7 @@ const userdata = [
     relationship_status: 'single',
     hobbies: 'swimming, traveling',
     friends_ids: '3, 4, 5',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'tpenniell7',
@@ -105,6 +112,7 @@ const userdata = [
     relationship_status: 'divorced',
     hobbies: 'surfing, kite surfing, fishing, hunting',
     friends_ids:  '1, 3, 5',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'msabbins8',
@@ -118,6 +126,7 @@ const userdata = [
     relationship_status: 'widow',
     hobbies: 'traveling, car racing, painting',
     friends_ids: '2, 3, 7',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   },
   {
     username: 'jmacarthur9',
@@ -131,6 +140,7 @@ const userdata = [
     relationship_status: 'married',
     hobbies: 'farming, eating',
     friends_ids: '5, 6, 9',
+    user_img_url:'https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg'
   }
 ];
 

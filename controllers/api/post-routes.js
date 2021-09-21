@@ -20,12 +20,12 @@ router.get('/', (req, res) => {
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ['username', 'user_img_url']
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username', 'user_img_url']
       }
     ]
   })
@@ -45,8 +45,8 @@ router.get('/:id', (req, res) => {
       'id',
       'post_text',
       'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      'created_at'
+      //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
       {
@@ -54,12 +54,12 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
+          attributes: ['username','user_img_url']
         }
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username', 'user_img_url']
       }
     ]
   })
