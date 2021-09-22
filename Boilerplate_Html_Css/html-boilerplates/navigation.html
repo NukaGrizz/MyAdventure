@@ -5,29 +5,36 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css-boilerplates/styleSearch.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../css-boilerplates/navStyle.css">
     <title>Search Bar</title>
 </head>
 <body>
-<section class="search-container-nav container-fluid px-4">
-    <div class="row">
-        <div class="place-holder col-lg-1 col-sm-1"></div>
-        <input class="search-input col-sm-6 " type="text" placeholder="Search..." name="">
-        <button type="submit" class="search-button col-lg-2 col-sm-2 " href="#">Search</button>
-        <button type="submit" class="search-button col-sm-1 ">
-            <i class="fa fa-envelope fa-2x"></i></button>
-        </button>
-        <button type="submit" class="search-button col-sm-1 ">pic</button>
-        <button type="submit" class="search-button col-sm-1 "><i class="fas fa-cog fa-2x"></i></button>
-
+<nav class="row navContainer">
+    <div class="col-1">
+        <div class="navButtons imgButton" style="background-image: url(https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg);"></div>
     </div>
-</section>
-
+    <div class="col-8 row search-Container">
+        <input class="search-input col-10" type="text" placeholder="Search..." name="">
+        <div class="dropdown col-2">
+            <button class="dropbtn">CATEGORIES</button>
+            <div class="dropdown-content">
+              <a href="#">Users</a>
+              <a href="#">Posts</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 row navContainer">
+        <div class="col">
+        <button type="submit" class="navButtons" ><i class="fas fa-search"></i></button></div>
+        <div class="col">
+        <button type="submit" class="navButtons imgButton" style="background-image: url(https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg);"></button></div>
+        <div class="col">
+        <button type="submit" class="navButtons"><i class="fas fa-cog"></i></button></div>
+    </div>    
+</nav>
 
 </body>
 </html>

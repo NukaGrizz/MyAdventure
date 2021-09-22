@@ -1,12 +1,11 @@
-<article class="post">
-  <div class="title">
-    <a href="{{post_text}}" target="_blank">{{title}}</a>
-    <span>({{format_url post_text}})</span>
-  </div>
-  <div class="meta">
-    <img src="{{user.user_img_url}}">
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+<a class="postPad postTitle" href="/post/{{id}}" target="_blank">{{title}}</a>
+<div class="interPostContainer">
+<article class="postPad">
+  <img class="userImg"src="{{user.user_img_url}}">
+  <span>{{format_url post_text}}</span>
+  <div class="row alignTextRight stayBetween">
+    <a class="alignTextRight">by {{user.username}} on {{format_date created_at}}</a>
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
-</article>
+

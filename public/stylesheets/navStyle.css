@@ -1,0 +1,99 @@
+
+.navContainer {
+    background-color: #ccc;
+    justify-content: space-evenly;
+    align-items: center;
+    height:50px;
+    margin: 5px 0px;
+}
+
+.navButtons {
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: white;
+    background-size:contain;
+}
+
+.navButtons:hover {
+    background-color: #F86800;
+}
+
+.imgButton:hover{
+    opacity: 0.7;
+}
+
+.signinBut {
+  border-radius: 25px;
+}
+
+.signinBut:hover {
+  background-color: #F86800;
+}
+
+.search-Container {
+    background-color: white;
+    border-radius: 25px;
+    height: 31px;
+    align-items: center;
+}
+
+.search-inputs {
+    border-style: none;
+}
+
+.dropbtn {
+  background-color: gray;
+  color: white;
+  height: 22px;
+  width: 100%;
+  font-size: 13px;
+  border: none;
+  border-radius: 25px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: gray;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #F86800;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #F86800;}
+
+.navSContainer {
+  background-color: #ccc;
+  justify-content: flex-end;
+  align-items: center;
+  height:50px;
+  flex-wrap: nowrap;
+}
+
+.navEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rightbut {
+  width:fit-content;
+  padding: .2vw;
+}
+
+.mainstyles {
+  margin: auto 20px;
+  justify-content: space-evenly;
+}
+  
