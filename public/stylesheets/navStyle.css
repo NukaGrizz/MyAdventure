@@ -1,8 +1,10 @@
+
 .navContainer {
     background-color: #ccc;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height:50px;
+    margin: 5px 0px;
 }
 
 .navButtons {
@@ -36,7 +38,7 @@
     align-items: center;
 }
 
-.search-input {
+.search-inputs {
     border-style: none;
 }
 
@@ -72,5 +74,26 @@
 
 .dropdown:hover .dropbtn {background-color: #F86800;}
 
+.navSContainer {
+  background-color: #ccc;
+  justify-content: flex-end;
+  align-items: center;
+  height:50px;
+  flex-wrap: nowrap;
+}
 
+.navEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rightbut {
+  width:fit-content;
+  padding: .2vw;
+}
+
+.mainstyles {
+  margin: auto 20px;
+  justify-content: space-evenly;
+}
   
