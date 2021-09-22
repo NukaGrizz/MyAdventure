@@ -21,6 +21,14 @@
     opacity: 0.7;
 }
 
+.signinBut {
+  border-radius: 25px;
+}
+
+.signinBut:hover {
+  background-color: #F86800;
+}
+
 .search-Container {
     background-color: white;
     border-radius: 25px;
