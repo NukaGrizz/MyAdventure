@@ -2,8 +2,8 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
 
-// get all users
-router.get('/', (req, res) => {
+// get all users:  search/users
+router.get('/users', (req, res) => {
     console.log('======================');
     User.findAll({
         attributes: [
@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 
             console.log(users);
 
-            res.render('searchpage', {
+            res.render('searchpage-users', {
                 users,
                 loggedIn: req.session.loggedIn
             });
@@ -29,8 +29,8 @@ router.get('/', (req, res) => {
 
 });
 
-// get all posts for a user
-router.get('/', (req, res) => {
+// get all posts: search/posts
+router.get('/posts', (req, res) => {
     console.log('======================');
     Post.findAll({
         attributes: [
@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
             'post_text',
             'title',
             'created_at',
-            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+            // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
         include: [
             {
@@ -57,8 +57,8 @@ router.get('/', (req, res) => {
     })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
-
-            res.render('homepage', {
+console.log(posts)
+            res.render('searchpage-posts', {
                 posts,
                 loggedIn: req.session.loggedIn
             });
