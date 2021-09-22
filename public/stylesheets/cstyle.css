@@ -1,0 +1,67 @@
+  .buttonpost  {
+    border-radius: 30px;
+    background-color: #F96701;
+    color: #fff;
+    border: none;
+    padding: 1px 10px;
+  }
+
+  .buttonpost:hover {
+    background-color: #6F6F6F;
+  }
+
+  .comments {
+    text-align: center;
+  }
+
+  .viewPostContainer {
+    border-radius: 25px;
+    background-color: #C4C4C4;
+    width: 100%;
+  }
+  
+  .userImg {
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: white;
+    background-size:contain;
+  }
+  
+  .interPostContainer {
+    background-color: white;
+    border-radius: 25px;
+    margin: 5px 10.5px;
+    border: 1px solid black;
+  }
+  
+  .marginRig {
+    margin: 0px 10px;
+  }
+
+  .postTitle {
+    width: 100%;
+    text-align:left;
+    margin-left: 10px;
+  }
+  
+  .postPad {
+    padding: 12px 12px;
+  }
+  
+  .commentSubmitBut {
+    justify-content: right;
+  }
+  
+  .alignTextRight{
+    text-align: right;
+    justify-content: flex-end;
+  }
+
+  .stayBetween {
+    width:100%;
+  }
+
+  .listStyle {
+    list-style-type: none;
+  }

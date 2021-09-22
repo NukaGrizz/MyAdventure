@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just Tech News</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="../css-boilerplates/landingpage.css">
+	<link href="http://fonts.cdnfonts.com/css/fugaz-one" rel="stylesheet"></link>
+  <link rel="stylesheet" href="../css-boilerplates/style.css">
+  <link rel="stylesheet" href="../css-boilerplates/landingpage.css">
+</head>
+
+<body>
+  
+    <header>
+      <h1>
+        <a href="/">MyAdventure</a>
+      </h1>
+      <nav>
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+      </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Create New Post</h2>
+          
+            <form class="new-post-form">
+              <div>
+                <label for="post-title">Title</label>
+                <input type="text" id="post-title" name="post-title" />
+              </div>
+              <div>
+                <label for="post-url">Link</label>
+                <input id="post-url" name="post-url" />
+              </div>
+              <button type="submit" class="btn">Create</button>
+            </form>
+          </section>
+          
+          <section>
+            <h2>Your Posts</h2>
+            <ol>
+              <!-- {{#each posts as |post|}} -->
+              <li>
+                <article class="post">
+                    <div class="title">
+                      <a href="{{post_text}}" target="_blank">Title of Post</a>
+                      <span>Post text</span>
+                    </div>
+                    <div class="meta">
+                      <img src="{{user.user_img_url}}">
+                       by username on 1/1/1111
+                      |
+                      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                    </div>
+                  </article>
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+              </li>
+              <!-- {{/each}} -->
+            </ol>
+          </section>
+          <!-- {{/if}} -->
+        
+
+
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  
+  <!-- {{#if loggedIn}} -->
+  <script src="/javascript/logout.js"></script>
+  <!-- {{/if}} -->
+</body>
+
+</html>
