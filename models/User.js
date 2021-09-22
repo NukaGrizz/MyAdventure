@@ -94,6 +94,7 @@ User.init(
         user_img_url: {
             type: DataTypes.STRING,
             allowNull: true,
+            defaultValue: "https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg"
         },
     },
     {
