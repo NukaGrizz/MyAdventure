@@ -69,6 +69,50 @@ console.log(posts)
         });
 });
 
+// get all posts by user: search/posts/:id
+router.get('/users/:id', (req, res) => {
+    console.log('======================');
+    Post.findAll({
+        attributes: [
+            'id',
+            'post_text',
+            'title',
+            'created_at',
+            // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+        ],
+        include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username', 'user_img_url']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username', 'user_img_url'],
+                where: {
+                    id: req.params.id
+                },
+            }
+        ]
+    })
+        .then(dbPostData => {
+            const posts = dbPostData.map(post => post.get({ plain: true }));
+            console.log(posts)
+            res.render('searchpage-posts', {
+                posts,
+                loggedIn: req.session.loggedIn
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+
 // get single post
 router.get('/post/:id', (req, res) => {
     Post.findOne({
@@ -88,12 +132,12 @@ router.get('/post/:id', (req, res) => {
                 attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
                 include: {
                     model: User,
-                    attributes: ['username', 'user_img_url']
+                    attributes: ['id','username', 'user_img_url']
                 }
             },
             {
                 model: User,
-                attributes: ['username', 'user_img_url']
+                attributes: ['id', 'username', 'user_img_url']
             }
         ]
     })
