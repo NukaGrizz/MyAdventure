@@ -7,6 +7,7 @@
 }
 
 
+
 .search-display {
   display: grid;
   /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; same as code below*/
@@ -267,4 +268,43 @@ border-radius: 30px;
   /*for desktop*/
 
 
-  
+  .viewPostContainer {
+  width: 100%;
+  border-radius: 25px;
+  background-color: #C4C4C4;
+}
+
+.userImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  background-color: white;
+  background-size:contain;
+}
+
+.interPostContainer {
+  background-color: white;
+  border-radius: 25px;
+  margin: 5px 12.5px;
+}
+
+.marginRig {
+  margin-left: 10px;
+}
+
+.postPad {
+  padding: 12px 12px;
+}
+
+.commentSubmitBut {
+  justify-content: right;
+}
+
+.alignTextRight{
+  text-align: right;
+}
+
+
+
+
+

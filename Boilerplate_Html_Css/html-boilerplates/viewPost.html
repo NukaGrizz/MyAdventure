@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Specific Posts</title>
-    <link rel="stylesheet" href="../css-boilerplates/style.css" />
+    <link rel="stylesheet" href="../css-boilerplates/cstyle.css" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -15,9 +15,98 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 <body>
+  
+    <main>
+        
+        <div class="viewPostContainer row col">
+            <!-- Post-info begin -->
+            <a class="postPad marginRig" href="{{post_text}}" target="_blank">{{title}}</a>
+            <div class="interPostContainer">
+                <article class="postPad">
+                    <div class="">
+                    <img class="userImg" src="https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg"><span>({{format_url post_text}})</span>
+                    </div>
+                    <div class="row alignTextRight">
+                    <a> by {{user.username}} on {{format_date created_at}}</a>
+                    |
+                    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                    </div>
+                </article>
+                <!-- Post-info end -->
+                <!-- middle of single-post begin -->
+
+                {{#if loggedIn}}
+                <form class="comment-form">
+                <div>
+                    <textarea style="width:100%" name="comment-body"></textarea>
+                </div>
+                
+                <div class="row commentSubmitBut">
+                    <!-- <button type="button" class="upvote-btn">upvote</button> -->
+                    <button type="submit"class="buttonpost w-auto">add comment</button>
+                </div>
+                </form>
+                {{/if}}
+                <!-- middle of single post end -->
+                <!-- comments handlebars -->
+                <div class="comments">
+                    {{#each this}}
+                    <section class="comment">
+                        <div class="meta">
+                        <img class="userImg" src="https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg">
+                        myUsername on 1/1/1111
+                        </div>
+                        <div class="text">
+                        this is the comment text
+                        </div>
+                    </section>
+                    {{/each}}
+                </div>
+            
+                <!-- comments handelbars end -->
+            </div>
+        </div>
+        {{#if loggedIn}}
+        <script src="/javascript/comment.js"></script>
+        <script src="/javascript/upvote.js"></script>
+        {{/if}}
+    
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
    
 
-    <main class="search-display">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <main class="search-display">
 
         <aside class="side-panel"> </aside>
 
@@ -30,33 +119,32 @@
                 <ul class="no-bullets pl-5 h-100">
                     <li class="individual-container-post container-fluid">
                         <div class="row">
-
-                            <div class="first-post"></div>
-
+                            <div class="first-post">klxljcnbcjbdn</div>
                             <p class="individual-container-post-text col">
+                            <button class="buttonpost w-auto">POST COMMENT</button>
                         </div>
-                        <div class="row text-center no-gutters"
+
+                    </li>
+
+
+                        <!-- <div class="row text-center no-gutters"
                             <div class="middle-box">
-                                <div class="second-post"></div>
+                                <div class="second-post">dgsdg</div>
                                 <div class="row d-flex justify-content-end">
 
 
-                                    <button class="buttonpost w-auto">POST COMMENT</button>
-
-
-                                    <div class=third-post></div>
-
+                                    
 
                                 </div>
 
 
 
 
-                            </div>
-                    </li>
+                            </div> -->
+                    
                 </ul>
             </section>
-            </section>
+            </section> -->
 
 
 
