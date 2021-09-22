@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Just Tech News</title>
@@ -16,30 +17,53 @@
 
 <body>
   <div class="">
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Tech News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="../css-boilerplates/landingpage.css">
+    <link href="http://fonts.cdnfonts.com/css/fugaz-one" rel="stylesheet"></link>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/landingpage.css">
+    <!--CSS for Search Page-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="stylesheets/styleSearch.css">
+</head>
+
+<body>s
+<div class="wrapper">
+>>>>>>> 6916842e7a28d874b29a37528494eb58af475ce2
     <header>
-      <h1>
-        <a href="/">Just Tech News</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/signup">signup</a>
-        {{/if}}
-      </nav>
+        <h1>
+            <a href="/">Just Tech News</a>
+        </h1>
+        <nav>
+            {{#if loggedIn}}
+                <a href="/dashboard">dashboard</a>
+                <button id="logout" class="btn-no-style">logout</button>
+            {{else}}
+                <a href="/signup">signup</a>
+            {{/if}}
+        </nav>
     </header>
     <main>
-      {{{ body }}}
+        {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+        Thanks for visiting!
     </footer>
-  </div>
-  
-  {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
+</div>
+
+{{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+{{/if}}
 </body>
 
 </html>
