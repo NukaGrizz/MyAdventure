@@ -1,0 +1,29 @@
+<body>
+    <div class="search-display">
+        <aside class="side-panel"> Aside column Left</aside>
+
+        <section class="search-result-container">
+            <div class="page-name">Search Results</div>
+        {{#each posts as |posts|}}
+            <ul class="no-bullets">
+                <li class="individual-container-post container-fluid">
+                    <div class="row">
+                        <img class="individual-container-post-image img-no-stretch col-12 col-sm-12 col-md-4 col-lg-2"
+                             src="{{user.user_img_url}}">
+                        <p class="individual-container-post-text col">{{user.username}}</p>
+                    </div>
+                    <div class="row row-cols-auto text-center no-gutters">
+                        <p class="individual-container-post-motto-lbl col-lg-3 col-sm-3">Post: </p>
+                        <p class="individual-container-post-motto-txt col-lg-9 col-sm-9">  {{posts.title}} </p>
+                    </div>
+                    <div class="row">
+                        <a class="individual-container-post-viewProfile col-12" href="#">View Profile</a>
+                    </div>
+                </li>
+            </ul>
+        {{/each}}
+        </section>
+
+        <aside class="side-panel"> Aside column right</aside>
+    </div>
+</body>
