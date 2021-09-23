@@ -57,11 +57,8 @@ router.get('/posts', (req, res) => {
     })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
-console.log(posts)
-            res.render('searchpage-posts', {
-                posts,
-                loggedIn: req.session.loggedIn
-            });
+            console.log(posts)
+            res.render('searchpage-posts', { posts, loggedIn: req.session.loggedIn });
         })
         .catch(err => {
             console.log(err);
