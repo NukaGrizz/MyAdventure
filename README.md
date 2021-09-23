@@ -5,6 +5,7 @@ Employee-Tracker
 MIT License
 
 # Description
+Have you ever wished there was a social site that you could use share your life stories and find and like minded people with that were grounded and trying to survive the adventure that is life without the fake glamor that ever social site seems to drown itself in. Well we have created a new social media app that specifically caters to “adventure-minded” individuals like you. Users will be able to create and customize their own profile, share stories about their daily adventures and interact with other adventurers. 
 
 
 # Table of Contents
