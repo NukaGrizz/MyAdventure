@@ -1,12 +1,12 @@
-<div class="comments">
+<div class="">
   {{#each this}}
-  <section class="comment">
-    <div class="meta">
+  <section class="interPostContainer">
+    <div class="postPad">
       <img class="userImg" src="{{user.user_img_url}}">
-      {{user.username}} on {{format_date created_at}}
+      <span>{{comment_text}}</span>
     </div>
-    <div class="text">
-      {{comment_text}}
+    <div class="row alignTextRight stayBetween">
+      <a class="alignTextRight">by {{user.username}} on {{format_date created_at}}</a>
     </div>
   </section>
   {{/each}}
