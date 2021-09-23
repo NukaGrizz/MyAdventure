@@ -5,7 +5,7 @@ Employee-Tracker
 MIT License
 
 # Description
-A employee management sytem keeping a editable record of all employees, including thier salaries, roles, deparments, names, and id's.
+
 
 # Table of Contents
 Installation
