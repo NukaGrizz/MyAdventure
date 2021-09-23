@@ -103,17 +103,48 @@ router.get('/edit/:id', withAuth, (req, res) => {
     ]
   })
     .then(dbPostData => {
-      if (dbPostData) {
         const post = dbPostData.get({ plain: true });
-        
+      User.findOne({
+        attributes: { exclude: ['password'] },
+        where: {
+          id: req.session.user_id
+        },
+        include: [
+          {
+            model: Post,
+            attributes: ['id', 'title', 'post_text', 'created_at']
+          },
+          {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'created_at'],
+            include: {
+              model: Post,
+              attributes: ['title']
+            }
+          },
+          {
+            model: Post,
+            attributes: ['title'],
+            through: Vote,
+            as: 'voted_posts'
+          }
+        ]
+      })
+      .then(dbUserData => {
+        console.log(dbUserData)
+        const user = dbUserData.get({ plain: true });
+        console.log(user);
+      if (post) {  
         res.render('edit-post', {
           post,
+          user,
           loggedIn: true
         });
       } else {
         res.status(404).end();
       }
     })
+  })
     .catch(err => {
       res.status(500).json(err);
     });
