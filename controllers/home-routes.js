@@ -5,7 +5,7 @@ const { Post, User, Comment, Vote } = require('../models');
 // get all posts for homepage
 router.get('/', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/dashboard');
     return;
   }
 
