@@ -8,6 +8,7 @@ MIT License
 Have you ever wished there was a social site that you could use share your life stories and find and like minded people with that were grounded and trying to survive the adventure that is life without the fake glamor that ever social site seems to drown itself in. Well we have created a new social media app that specifically caters to “adventure-minded” individuals like you. Users will be able to create and customize their own profile, share stories about their daily adventures and interact with other adventurers. 
 
 
+[2021-09-22 (3)](https://user-images.githubusercontent.com/83742550/134450313-fc2f2185-7a3d-4d5b-9f25-d16ec4c3fc57.png)
 # Table of Contents
 Installation
 Usage
