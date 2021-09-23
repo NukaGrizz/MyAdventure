@@ -58,8 +58,39 @@ router.get('/posts', (req, res) => {
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
             console.log(posts)
-            res.render('searchpage-posts', { posts, loggedIn: req.session.loggedIn });
+            User.findOne({
+                attributes: { exclude: ['password'] },
+                where: {
+                  id: req.session.user_id
+                },
+                include: [
+                  {
+                    model: Post,
+                    attributes: ['id', 'title', 'post_text', 'created_at']
+                  },
+                  {
+                    model: Comment,
+                    attributes: ['id', 'comment_text', 'created_at'],
+                    include: {
+                      model: Post,
+                      attributes: ['title']
+                    }
+                  },
+                  {
+                    model: Post,
+                    attributes: ['title'],
+                    through: Vote,
+                    as: 'voted_posts'
+                  }
+                ]
+              })
+              .then(dbUserData => {
+                console.log(dbUserData)
+                const user = dbUserData.get({ plain: true });
+                console.log(user);
+            res.render('searchpage-posts', { posts, user, loggedIn: req.session.loggedIn });
         })
+    })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
