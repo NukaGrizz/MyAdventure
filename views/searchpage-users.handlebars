@@ -4,8 +4,12 @@
 
         <section class="search-result-container">
             <div class="page-name">Search Results</div>
-        {{#each users as |user|}}
-            <ul class="no-bullets">
+        <ul class="post-list listStyle">
+            {{#each users as |user|}}
+            <li>
+                    {{> user-info user }}
+            </li>
+            {{!-- <ul class="no-bullets">
                 <li class="individual-container-post container-fluid">
                     <div class="row">
                         <img class="individual-container-post-image img-no-stretch col-12 col-sm-12 col-md-4 col-lg-2"
@@ -20,8 +24,9 @@
                         <a class="individual-container-post-viewProfile col-12" href="#">View Profile</a>
                     </div>
                 </li>
-            </ul>
+            </ul> --}}
         {{/each}}
+        </ul>
         </section>
 
         <aside class="side-panel"> Aside column right</aside>
