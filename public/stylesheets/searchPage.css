@@ -3,24 +3,14 @@ main {
     padding: 0;
 }
 
-.search-display {
-    display: grid;
-    /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; same as code below*/
-    grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 10px;
-}
-
-.side-panel {
-    background-color: #c2c2e0;
-    grid-column: span 2;
-    margin: 2px;
+.mainstyles.search {
+    margin: auto 20px;
+    justify-content: space-evenly;
 }
 
 .search-result-container {
-    grid-column: 3/-3; /*start and end columns*/
     min-height: 1000px;
     border-radius: 25px;
-    padding: 10px 30px 0 0;
     background-color: rgba(196, 196, 196, 1);
 }
 

@@ -1,20 +1,14 @@
 <body>
-    <div class="search-display">
-        <aside class="side-panel"> Aside column Left</aside>
-
-        <section class="search-result-container">
-            <div class="page-name">Search Results</div>
-            <ul class="post-list listStyle">
-                {{#each posts as |post|}}
+    <section class="search-result-container">
+        <div class="page-name">Search Results</div>
+        <ul class="post-list listStyle">
+            {{#each posts as |post|}}
                 <li>
                     {{> post-info post }}
                 </li>
-                {{/each}}
-            </ul>
-        </section>
-
-        <aside class="side-panel"> Aside column right</aside>
-    </div>
+            {{/each}}
+        </ul>
+    </section>
 </body>
 
 
