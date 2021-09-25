@@ -1,34 +1,12 @@
 <body>
-    <div class="search-display">
-        <aside class="side-panel"> Aside column Left</aside>
-
-        <section class="search-result-container">
-            <div class="page-name">Search Results</div>
-        <ul class="post-list listStyle">
+    <section class="searchHandleResultContainer">
+        <div class="searchHandlePageName">Search Results</div>
+        <ul class="searchHandlelistStyle">
             {{#each users as |user|}}
-            <li>
+                <li>
                     {{> user-info user }}
-            </li>
-            {{!-- <ul class="no-bullets">
-                <li class="individual-container-post container-fluid">
-                    <div class="row">
-                        <img class="individual-container-post-image img-no-stretch col-12 col-sm-12 col-md-4 col-lg-2"
-                             src="{{user.user_img_url}}">
-                        <p class="individual-container-post-text col">{{user.username}}</p>
-                    </div>
-                    <div class="row row-cols-auto text-center no-gutters">
-                        <p class="individual-container-post-motto-lbl col-lg-3 col-sm-3">Motto: </p>
-                        <p class="individual-container-post-motto-txt col-lg-9 col-sm-9">  {{user.motto}} </p>
-                    </div>
-                    <div class="row">
-                        <a class="individual-container-post-viewProfile col-12" href="#">View Profile</a>
-                    </div>
                 </li>
-            </ul> --}}
-        {{/each}}
+            {{/each}}
         </ul>
-        </section>
-
-        <aside class="side-panel"> Aside column right</aside>
-    </div>
+    </section>
 </body>
