@@ -1,10 +1,10 @@
-<a class="post-pad post-title" href="/post/{{id}}" target="_blank">{{title}}</a>
-<div class="interPostContainer">
-<article class="post-pad">
-  <img class="post-userImg"src="{{user.user_img_url}}">
+<a class="searchHandlePostPad searchHandlePostTitle" href="/post/{{id}}" target="_blank">{{title}}</a>
+<div class="searchHandleInterPostContainer">
+<article class="searchHandlePostPad">
+  <img class="searchHandleUserImg"src="{{user.user_img_url}}">
   <span>{{format_url post_text}}</span>
-  <div class="row post-aligntextright stayBetween">
-    <a class="post-aligntextright">by {{user.username}} on {{format_date created_at}}</a>
+  <div class="row searchHandleAlignTextRight searchHandleStayBetween">
+    <a class="searchHandleAlignTextRight">by {{user.username}} on {{format_date created_at}}</a>
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>

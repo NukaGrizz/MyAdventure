@@ -43,7 +43,7 @@
 }
 
 .dropbtn {
-  background-color: gray;
+  background-color: #C4C4C4;
   color: white;
   height: 22px;
   width: 100%;
@@ -55,7 +55,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: gray;
+  background-color: #C4C4C4;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -96,4 +96,64 @@
   margin: auto 20px;
   justify-content: space-evenly;
 }
+
+.userDashdivbacks {
+  background-color: #C4C4C4;
+  margin-top: 10px;
+}
+
+.roundcorners {
+  border-radius: 25px;
+}
+
+.dashboardMarginex {
+  margin: 10px;
+}
+
+.dashboardInputTitlearea {
+  border-radius: 25px;
+}
+
+.dashboardInputtextarea {
+  border-radius: 25px;
+  padding: 5px
+}
+
+.dashboardUsernameText {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.userdashboardmotto {
+  margin: 10px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.userdashboarditemsconatiner {
+  margin: 10px 0px;
+  text-align: right;
+  padding: 10px 0px;
+}
+
+.userdashboarditems {
+  font-size: 15px;
+  padding-top: 10px;
+  text-transform: capitalize;
+}
+
+.hobbiesTilte {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.hobbies {
+ text-transform: capitalize;
+ padding-bottom: 50px;
+ padding-top: 10px;
+}
+
+
+
+
   
