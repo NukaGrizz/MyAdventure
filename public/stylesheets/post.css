@@ -1,4 +1,6 @@
-  .buttonpost  {
+  
+  /* start button styling */
+  .post-button  {
     border-radius: 30px;
     background-color: #F96701;
     color: #fff;
@@ -6,21 +8,21 @@
     padding: 1px 10px;
   }
 
-  .buttonpost:hover {
+  .post-button:hover {
     background-color: #6F6F6F;
   }
-
-  .comments {
+  /* start comment box styling*/
+  .post-comments {
     text-align: center;
   }
 
-  .viewPostContainer {
+  .post-viewContainer{
     border-radius: 25px;
     background-color: #C4C4C4;
     width: 100%;
   }
   
-  .userImg {
+  .post-userImg {
     height: 40px;
     width: 40px;
     border-radius: 25px;
@@ -28,41 +30,41 @@
     background-size:contain;
   }
   
-  .interPostContainer {
+  .post-interPostConatiner {
     background-color: white;
     border-radius: 25px;
     margin: 5px 10.5px;
     border: 1px solid black;
   }
   
-  .marginRig {
+  .post-marginRig {
     margin: 0px 10px;
   }
 
-  .postTitle {
+  .post-title {
     width: 100%;
     text-align:left;
     margin-left: 10px;
   }
   
-  .postPad {
+  .post-pad {
     padding: 12px 12px;
   }
   
-  .commentSubmitBut {
+  .post-post-commentsubmitbut {
     justify-content: right;
   }
   
-  .alignTextRight{
+  .post-aligntextright{
     text-align: right;
     justify-content: flex-end;
   }
 
-  .stayBetween {
+  .post-stayBetween {
     width:100%;
   }
 
-  .listStyle {
+  .post-listStyle {
     list-style-type: none;
     padding: 0px;
   }
