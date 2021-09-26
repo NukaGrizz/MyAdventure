@@ -4,28 +4,28 @@
     Edit Post
   </h2>
   <form class="edit-post-form">
-    <div class="marginRig">
-      <textarea placeholder="{{post.title}}" value="({{post.title}})" style="padding: 10px;" class="stayBetween dashboardInputTitlearea" type="text" id="post-title" name="post-title"></textarea>
-      <textarea rows="4"  style="padding: 10px;" placeholder="{{post.post_text}}" value="({{post.post_text}})" class="stayBetween dashboardInputtextarea" id="post-url" name="post-url"></textarea>
+    <div class="post-marginRig">
+      <textarea placeholder="{{post.title}}" value="({{post.title}})" style="padding: 10px;" class="post-stayBetween dashboardInputTitlearea" type="text" id="post-title" name="post-title"></textarea>
+      <textarea rows="4"  style="padding: 10px;" placeholder="{{post.post_text}}" value="({{post.post_text}})" class="post-stayBetween dashboardInputtextarea" id="post-url" name="post-url"></textarea>
       {{!-- <span></span> --}}
     </div>
     <div>
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
-    <div class="row commentSubmitBut stayBetween">
-    <button type="submit" class="buttonpost w-auto">Save post</button>
-    <button type="button" class="delete-post-btn buttonpost w-auto">Delete post</button>
+    <div class="row post-post-commentsubmitbut post-stayBetween">
+    <button type="submit" class="post-button w-auto">Save post</button>
+    <button type="button" class="delete-post-btn post-button w-auto">Delete post</button>
     </div>
   </form>
 </article>
 
 <form class="comment-form dashboardMarginex">
       <div class="marginRig">
-        <textarea class="stayBetween" name="comment-body"></textarea>
+        <textarea class="searchHandleStayBetween" name="comment-body"></textarea>
       </div>
 
-      <div class="row commentSubmitBut stayBetween">
-        <button type="submit"class="buttonpost w-auto">ADD COMMENT</button>
+      <div class="row post-post-commentsubmitbut searchHandleStayBetween">
+        <button type="submit"class="post-button w-auto">ADD COMMENT</button>
       </div>
 </form>
 
