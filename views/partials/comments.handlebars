@@ -1,12 +1,12 @@
 <div class="">
   {{#each this}}
-  <section class="interPostContainer">
-    <div class="postPad">
-      <img class="userImg" src="{{user.user_img_url}}">
+  <section class="searchHandleInterPostContainer">
+    <div class="searchHandlePostPad">
+      <img class="searchHandleUserImg" src="{{user.user_img_url}}">
       <span>{{comment_text}}</span>
     </div>
-    <div class="row alignTextRight stayBetween">
-      <a class="alignTextRight">by {{user.username}} on {{format_date created_at}}</a>
+    <div class="row searchHandleAlignTextRight searchHandleStayBetween">
+      <a class="searchHandleAlignTextRight">by {{user.username}} on {{format_date created_at}}</a>
     </div>
   </section>
   {{/each}}
