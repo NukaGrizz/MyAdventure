@@ -20,7 +20,7 @@
     margin: 2px;
 }
 
-.search-result-container {
+.searchHandleResultContainer {
     grid-column: 3/-3; /*start and end columns*/
     min-height: 1000px;
     border-radius: 25px;
@@ -28,7 +28,7 @@
     background-color: rgba(196, 196, 196, 1);
 }
 
-.search-result-container.user-info{
+.searchHandleResultContainer.user-info{
     padding: 10px 30px 0 30px;
 }
 
@@ -145,7 +145,7 @@
     align-self: start;
 }
 
-.page-name {
+.searchHandlePageName {
     padding: 3px 0 10px 30px;
 }
 
