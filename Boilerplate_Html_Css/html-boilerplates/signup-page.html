@@ -11,39 +11,49 @@
 	<link href="http://fonts.cdnfonts.com/css/fugaz-one" rel="stylesheet"></link>
 </head>
 <body>
-    <body class="login-form">
-        <section class="h-100">
-            <div class="container h-100 custom-width">
+     <!-- body and all content -->
+    <body class="login-form landing-page">
+        <section>
+            	<!-- main container including registration inputs -->
+            <div class="container custom-width">
                         <div class="card fat">
                             <main class="card-body">
+                                <!-- header title content -->
                                 <h4 class="card-title header-text">Adventure</h4>
                                 <form method="POST" class="my-login-validation" novalidate="">
+                                    <!-- new-email address label -->
                                     <div class="form-group lower-form">
                                         <label for="email">New User E-Mail:</label>
+                                        <!-- email address input box -->
                                         <input id="email" type="email" class="form-control input-style" name="email" value="" required autofocus>
+                                       <!-- email address input verification -->
                                         <div class="invalid-feedback">
                                             Email is invalid
                                         </div>
                                     </div>
-    
+                                        <!-- new-password label -->
                                     <div  class="form-group">
                                         <label for="password-signup">New User Password:</label>
+                                       <!-- new-password input box -->
                                         <input id="password" type="password" class="form-control input-style" name="password" required data-eye>
+                                        <!-- password input verification -->
                                         <div class="invalid-feedback">
                                             Password is required
                                         </div>
                                     </div>
-
-                                    <div tabindex="1" class="form-group">
+                                             <!-- confirm new-password label -->
+                                    <div class="form-group">
                                         <label for="email">Confirm Password:</label>
+                                       <!-- confirm new-password input box -->
                                         <input id="email" type="email" class="form-control input-style" name="email" value="" required data-eye>
+                                        <!-- confirm password input verification -->
                                         <div class="invalid-feedback">
                                             Password does not match
                                         </div>
                                     </div>
-                                    
+                                    <!-- captcha logo design -->
                                 <div class="rc-anchor-center-item">
-                                    
+                                    <!-- captcha box with script -->
                                     <title>reCAPTCHA demo: Explicit render after an onload callback</title>
                                     <script type="text/javascript">
                                         var onloadCallback = function () {
@@ -63,7 +73,7 @@
                                 </div>
     
     
-                                    <div tabindex="3"class="form-group m-0 login-button-container">
+                                    <div class="form-group m-0 login-button-container">
                                         <button type="submit" class="btn btn-primary btn-block login-button">
                                             Register
                                         </button>
