@@ -1,10 +1,12 @@
-{{!-- <a class="postPad postTitle" href="/user/{{id}}" target="_blank">{{title}}</a> --}}
-<div class="interPostContainer">
-<article class="postPad">
-  <img class="userImg"src="{{user_img_url}}">
+
+<div class="searchHandleInterPostContainer">
+<article class="searchHandlePostPad">
+  <img class="searchHandleUserImg"src="{{user_img_url}}">
   <span>{{username}}</span>
-  <div class="row alignTextRight stayBetween">
-    <a class="alignTextRight"> {{motto}}</a>
-    {{!-- <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> --}}
+  <div class="row row-cols-auto justify-content-md-start align-baseline">
+
+      <p class="searchHandleLabelMotto">Motto:</p>
+    <a> {{motto}}</a>
+
   </div>
 

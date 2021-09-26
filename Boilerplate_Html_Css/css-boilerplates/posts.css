@@ -268,13 +268,13 @@ border-radius: 30px;
   /*for desktop*/
 
 
-  .viewPostContainer {
+  .post-viewContainerr {
   width: 100%;
   border-radius: 25px;
   background-color: #C4C4C4;
 }
 
-.userImg {
+.post-userImg {
   height: 40px;
   width: 40px;
   border-radius: 25px;
@@ -282,7 +282,7 @@ border-radius: 30px;
   background-size:contain;
 }
 
-.interPostContainer {
+.post-interPostConatiner {
   background-color: white;
   border-radius: 25px;
   margin: 5px 12.5px;
@@ -292,15 +292,15 @@ border-radius: 30px;
   margin-left: 10px;
 }
 
-.postPad {
+.post-pad {
   padding: 12px 12px;
 }
 
-.commentSubmitBut {
+.post-commentsubmitbut {
   justify-content: right;
 }
 
-.alignTextRight{
+.post-aligntextright{
   text-align: right;
 }
 
