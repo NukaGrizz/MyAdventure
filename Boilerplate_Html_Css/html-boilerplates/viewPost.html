@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Specific Posts</title>
-    <link rel="stylesheet" href="../css-boilerplates/cstyle.css" />
+    <link rel="stylesheet" href="../css-boilerplates/posts.css" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -18,15 +18,15 @@
   
     <main>
         
-        <div class="viewPostContainer row col">
+        <div class="post-viewContainerr row col">
             <!-- Post-info begin -->
-            <a class="postPad marginRig" href="{{post_text}}" target="_blank">{{title}}</a>
-            <div class="interPostContainer">
-                <article class="postPad">
+            <a class="post-pad marginRig" href="{{post_text}}" target="_blank">{{title}}</a>
+            <div class="post-interPostConatiner">
+                <article class="post-pad">
                     <div class="">
-                    <img class="userImg" src="https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg"><span>({{format_url post_text}})</span>
+                    <img class="post-userImg" src="https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg"><span>({{format_url post_text}})</span>
                     </div>
-                    <div class="row alignTextRight">
+                    <div class="row post-aligntextright">
                     <a> by {{user.username}} on {{format_date created_at}}</a>
                     |
                     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
@@ -41,7 +41,7 @@
                     <textarea style="width:100%" name="comment-body"></textarea>
                 </div>
                 
-                <div class="row commentSubmitBut">
+                <div class="row post-commentsubmitbut">
                     <!-- <button type="button" class="upvote-btn">upvote</button> -->
                     <button type="submit"class="buttonpost w-auto">add comment</button>
                 </div>
@@ -53,7 +53,7 @@
                     {{#each this}}
                     <section class="comment">
                         <div class="meta">
-                        <img class="userImg" src="https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg">
+                        <img class="post-userImg" src="https://res.cloudinary.com/myadventureteam/image/upload/v1632164336/ryjaor3ui85sf5f6s0fx.jpg">
                         myUsername on 1/1/1111
                         </div>
                         <div class="text">

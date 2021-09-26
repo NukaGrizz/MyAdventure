@@ -41,11 +41,26 @@
                                             Password does not match
                                         </div>
                                     </div>
-    
-                                    <div tabindex="2" class="form-group d-flex justify-content-center">
-                                        <div class="g-recaptcha" data-sitekey="6LfX3HQcAAAAAGf1PGXubt2oJU8vvs3-LLq9fce2" data-callback="6LfX3HQcAAAAAOUpfKgUjq-imyhzUhcWqv-UbSf8"></div>
-                                        <div id="g-recaptcha-error"></div>
-                                    </div>
+                                    
+                                <div class="rc-anchor-center-item">
+                                    
+                                    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
+                                    <script type="text/javascript">
+                                        var onloadCallback = function () {
+                                            grecaptcha.render('html_element', {
+                                                'sitekey': 'your_site_key'
+                                            });
+                                        };
+                                    </script>
+                                   
+                                        <form  class="rc-anchor-center-item" action="?" method="POST">
+                                            <div id="html_element"></div>
+                                            <br>
+                                            <input type="submit" value="Submit">
+                                        </form>
+                                        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+                                    </script>
+                                </div>
     
     
                                     <div tabindex="3"class="form-group m-0 login-button-container">

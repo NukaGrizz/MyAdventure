@@ -1,0 +1,79 @@
+a:hover {
+    color: orange;
+}
+
+main {
+    padding: 0;
+}
+
+/*contains all search results items*/
+.searchHandleResultContainer {
+    min-height: 1000px;
+    border-radius: 25px;
+    background-color: rgba(196, 196, 196, 1);
+}
+
+/*display text for search result page*/
+.searchHandlePageName {
+    font-size: medium;
+}
+
+/*removes the dots in unordered list*/
+.searchHandlelistStyle {
+    list-style-type: none;
+    padding: 0px;
+}
+
+/*styles the actual post/user*/
+.searchHandleInterPostContainer {
+    background-color: white;
+    border-radius: 25px;
+    margin: 5px 10.5px;
+    border: 1px solid black;
+}
+
+/*adds padding to post/ user content*/
+.searchHandlePostPad {
+    padding: 12px 12px;
+}
+
+/*changes text to post/ user content*/
+.searchHandlePostTitle {
+    width: 100%;
+    text-align:left;
+    margin-left: 10px;
+}
+
+/*styles the image for the user as a circle*/
+.searchHandleUserImg {
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: white;
+    background-size:contain;
+}
+/*aligns text to the right*/
+.searchHandleAlignTextRight{
+    text-align: right;
+    justify-content: flex-end;
+}
+
+/*modifies boostrap class to add a margin up top*/
+.row-cols-auto {
+    margin-top: 10px;
+}
+
+.searchHandleStayBetween {
+    width:100%;
+}
+
+.searchHandleLabelMotto {
+    font-size: medium;
+}
+
+
+
+
+
+
+
