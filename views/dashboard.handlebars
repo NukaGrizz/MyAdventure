@@ -1,7 +1,7 @@
 <section class="col-3">
   <div class="col userDashdivbacks ">
     <div class="">
-    <img class="stayBetween" src="{{user.user_img_url}}"></img>
+    <img class="post-stayBetween" src="{{user.user_img_url}}"></img>
     </div>
     <div class="dashboardMarginex">
     <div class="dashboardUsernameText">
@@ -20,9 +20,9 @@
   </div>
 </section>
 
-<section class="col-7">
-  <section class="userDashdivbacks roundcorners">
-    <h2 class="marginRig">Create New Post</h2>
+<section class="col-7 ">
+  <section class="userDashdivbacks roundcorners post-pad">
+    <h2 class="post-marginRig">Create New Post</h2>
 {{!-- <form class="">
       <div class="marginRig">
         <textarea class="stayBetween" name="comment-body"></textarea>
@@ -32,25 +32,25 @@
         <button type="submit"class="buttonpost w-auto">ADD COMMENT</button>
       </div>
     </form> --}}
-    <form class="new-post-form comment-form">
-      <div class="marginRig">
-        <textarea placeholder="  Title" style="padding: 10px;" class="stayBetween dashboardInputTitlearea" type="text" id="post-title" name="post-title"></textarea>
+    <form class="new-post-form comment-form ">
+      <div class="post-marginRig">
+        <textarea placeholder="  Title" style="padding: 10px;" class="post-stayBetween dashboardInputTitlearea" type="text" id="post-title" name="post-title"></textarea>
       </div>
-      <div class="marginRig">
-        <textarea rows="4" style="padding: 10px;" placeholder="  My Adventure Story"class="stayBetween dashboardInputtextarea" id="post-url" name="post-url"></textarea>
+      <div class="post-marginRig">
+        <textarea rows="4" style="padding: 10px;" placeholder="  My Adventure Story"class="post-stayBetween dashboardInputtextarea" id="post-url" name="post-url"></textarea>
       </div>
-      <div class="row commentSubmitBut stayBetween">
-      <button type="submit" class="btn buttonpost w-auto dashboardMarginex">Post New Adventure</button>
+      <div class="row post-post-commentsubmitbut post-stayBetween">
+      <button type="submit" class="btn post-button w-auto dashboardMarginex">Post New Adventure</button>
       </div>
     </form>
   </section>
 
   {{#if posts.length}}
-  <section class="userDashdivbacks roundcorners">
-    <h2 class="marginRig">Your Posts</h2>
-    <ul class="listStyle">
+  <section class="userDashdivbacks roundcorners post-pad">
+    <h2 class="post-marginRig dashboardMarginex">Your Posts</h2>
+    <ul class="post-listStyle post-pad">
       {{#each posts as |post|}}
-      <li>
+      <li class="dashboardMarginex">
         {{> post-info post}}
         <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
         </article>
