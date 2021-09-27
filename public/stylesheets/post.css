@@ -2,14 +2,15 @@
   /* start button styling */
   .post-button  {
     border-radius: 30px;
-    background-color: #F96701;
+    background-color: #6F6F6F;
     color: #fff;
     border: none;
     padding: 1px 10px;
   }
 
   .post-button:hover {
-    background-color: #6F6F6F;
+    color: #fff;
+    background-color: #F96701;
   }
   /* start comment box styling*/
   .post-comments {
@@ -40,7 +41,7 @@
   .post-marginRig {
     margin: 0px 10px;
   }
-
+  
   .post-title {
     width: 100%;
     text-align:left;

@@ -3,7 +3,7 @@ const sequelize = require('../../config/connection');
 const { Post, User, Comment, Vote } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all users
+// get all posts  /api/posts/
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
@@ -36,6 +36,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// get all posts /api/posts/:id
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -76,6 +77,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// Post create post /api/posts
 router.post('/', withAuth, (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_text: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
@@ -90,23 +92,20 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-router.put('/upvote', withAuth, (req, res) => {
-  // custom static method created in models/Post.js
-  Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-    .then(updatedVoteData => res.json(updatedVoteData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// not currently in use mean for future dev
+// router.put('/upvote', withAuth, (req, res) => {
+//   // custom static method created in models/Post.js
+//   Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+//     .then(updatedVoteData => res.json(updatedVoteData))
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
+// Put update post /api/posts/:id
 router.put('/:id', withAuth, (req, res) => {
-  Post.update(
-    
-    {
-      title: req.body.title,
-      post_text: req.body.post_text
-    },
+  Post.update(req.body,
     {
       where: {
         id: req.params.id
@@ -126,6 +125,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
+// Delete destroy post /api/posts/:id
 router.delete('/:id', withAuth, (req, res) => {
   console.log('id', req.params.id);
   Post.destroy({

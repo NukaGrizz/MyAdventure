@@ -19,9 +19,6 @@ body.landing-page {
 	padding: 30px;
 }
 
-
-
-
 /* header title colors and margin */
 .landing-page .card .card-title {
 	margin-bottom: 30px;
@@ -104,7 +101,7 @@ p {
 /* login button color, width, and border-radius */
 .login-button {
 background: #F86800;
-
+margin-top: 10px;
 border-radius: 12px;
 max-width: 100px; 
 }
@@ -125,6 +122,12 @@ captcha verification on signup
 .g-verify {
 	height: 60px;
 }
+
+/* login and signup item spacing */
+.login-spaceing {
+	margin-bottom: 10px;
+}
+
 /* 
 .login-button-container:focus {
     background-color: white

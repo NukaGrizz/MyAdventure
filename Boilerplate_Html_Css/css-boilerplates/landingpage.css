@@ -38,7 +38,9 @@ body.landing-page {
 /* login button padding */
 .landing-page .btn.btn-block {
 	padding: 12px 10px;
+	margin-top: 10px;
 }
+
 
 /* footer */
 .landing-page .footer {
