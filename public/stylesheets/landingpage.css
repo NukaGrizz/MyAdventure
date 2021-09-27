@@ -49,25 +49,6 @@ body.landing-page {
 	text-align: center;
 }
 
-
-/* media queries  */
-@media screen and (max-width: 425px) {
-	.landing-page .card-wrapper {
-		width: 90%;
-		margin: 0 auto;
-	}
-}
-
-@media screen and (max-width: 320px) {
-	.landing-page .card.fat {
-		padding: 0;
-	}
-
-	.landing-page .card.fat .card-body {
-		padding: 15px;
-	}
-}
-
 /* main container width */
 .custom-width {
     max-width: 550px !important;
@@ -75,7 +56,7 @@ body.landing-page {
 
 /* header text */
 .header-text {
-    font-size: 3.8vw;
+    font-size: 3.5vw;
     font-family: Fugaz none;
     text-align: center;
     background: -webkit-linear-gradient(rgba(248, 104, 0, 1), rgba(255, 230, 3, 1));
@@ -128,11 +109,42 @@ captcha verification on signup
 	margin-bottom: 10px;
 }
 
-/* 
-.login-button-container:focus {
-    background-color: white
+/* login motto text */
+.login-text {
+	font-size: 20px;
+}
+.header-text {
+	font-size: 6vw;
 }
 
-div:focus {
-    background-color:red;
-} */
+/* media queries  */
+@media screen and (max-width: 700px) {
+	.hideOnSmall {
+		display: none;
+	}
+	.header-text {
+		font-size: 8vw;
+	}
+	
+}
+
+@media screen and (max-width: 425px) {
+	.landing-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.header-text {
+		font-size: 12vw;
+	}
+
+}
+
+@media screen and (max-width: 320px) {
+	.landing-page .card.fat {
+		padding: 0;
+	}
+
+	.landing-page .card.fat .card-body {
+		padding: 15px;
+	}
+}

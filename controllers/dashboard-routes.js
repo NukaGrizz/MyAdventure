@@ -13,7 +13,7 @@ router.get('/', withAuth, (req, res) => {
     },
     order: [
       ['created_at', 'DESC'],
-  ],
+    ],
     attributes: [
       'id',
       'post_text',

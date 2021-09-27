@@ -26,9 +26,9 @@
           <button class="navButtons imgButton" style="background-image: url(https://res.cloudinary.com/myadventureteam/image/upload/v1632363419/MyAdventure_logo_rmzrki.png);"></button>
         </a>
       </div>
-      <div class="col-8 row search-Container">
-          <input class="search-inputs col-10" type="text" placeholder="Search..." name="">
-          <div class="dropdown col-2">
+      <div class="col-5 row search-Container">
+          {{!-- <input class="search-inputs col-10" type="text" placeholder="Search..." name=""> --}}
+          <div class="dropdown col">
               <button class="dropbtn">CATEGORIES</button>
               <div class="dropdown-content">
                 <a href="/search/users">Users</a>
@@ -37,16 +37,16 @@
           </div>
       </div>
       <nav class="col-1 row navSContainer rightbut">
-          <div class=" rightbut">
+          {{!-- <div class=" rightbut">
             <button type="submit" class="navButtons" ><i class="fas fa-search"></i></button>
-          </div>
+          </div> --}}
           <div class=" rightbut">
           <a href="/dashboard">
           <button type="submit" class="navButtons imgButton" style="background-image: url({{user.user_img_url}});"></button>
           </a>
           </div> 
           <div class=" rightbut">
-            <button id="logout" class="navButtons"><i class="fas fa-cog"></i></button>
+            <button id="logout" class="navButtons"><i class="fas fa-sign-out-alt"></i></button>
           </div>
       </nav>    
     </header>
