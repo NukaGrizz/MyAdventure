@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const {Post, User, Comment, Vote} = require('../models');
 
-// get all users:  search/users
+// get all users:  search/users and redner search users page
 router.get('/users', (req, res) => {
     console.log('======================');
     User.findAll({
@@ -59,7 +59,7 @@ router.get('/users', (req, res) => {
 
 });
 
-// get all posts: search/posts
+// get all posts: search/posts and render shearch post page
 router.get('/posts', (req, res) => {
     console.log('======================');
     Post.findAll({
@@ -127,7 +127,7 @@ router.get('/posts', (req, res) => {
         });
 });
 
-// get single post
+// get single post and render single post page
 router.get('/post/:id', (req, res) => {
     Post.findOne({
         where: {
@@ -174,6 +174,7 @@ router.get('/post/:id', (req, res) => {
         });
 });
 
+// render login page or redirect to dashboard if already logged in
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -183,6 +184,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+//renders signup page or redirect to dashboard if already logged in
 router.get('/signup', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');

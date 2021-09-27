@@ -38,7 +38,6 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      console.log(posts);
       User.findOne({
       attributes: { exclude: ['password'] },
       where: {
@@ -78,6 +77,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
+// get all posts for edit posts
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [

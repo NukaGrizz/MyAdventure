@@ -5,6 +5,7 @@ const homeRoutes = require('./home-routes.js');
 const dashboardRoutes = require('./dashboard-routes.js');
 const searchRoutes = require('./searchpage-routes.js');
 
+// middleware for directing page requests to correct routes
 router.use('/', homeRoutes);
 router.use('/dashboard', dashboardRoutes);
 router.use('/search', searchRoutes);

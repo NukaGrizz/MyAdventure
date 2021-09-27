@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
 
-// get all posts for homepage
+// landing page for site renders login page unless logined in which renders dashboard
 router.get('/', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/dashboard');
@@ -45,13 +45,39 @@ router.get('/post/:id', (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-
       const post = dbPostData.get({ plain: true });
-
-      res.render('single-post', {
-        post,
-        loggedIn: req.session.loggedIn
-      });
+      User.findOne({
+        attributes: { exclude: ['password'] },
+        where: {
+          id: req.session.user_id
+        },
+        include: [
+          {
+            model: Post,
+            attributes: ['id', 'title', 'post_text', 'created_at']
+          },
+          {
+            model: Comment,
+            attributes: ['id', 'comment_text', 'created_at'],
+            include: {
+              model: Post,
+              attributes: ['title']
+            }
+          },
+          {
+            model: Post,
+            attributes: ['title'],
+            through: Vote,
+            as: 'voted_posts'
+          }
+        ]
+      })
+      .then(dbUserData => {
+        console.log(dbUserData)
+        const user = dbUserData.get({ plain: true });
+        console.log(user);
+        res.render('single-post', { user, post, loggedIn: req.session.loggedIn });
+      })
     })
     .catch(err => {
       console.log(err);
@@ -59,6 +85,7 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+// render login page or redirect to dashboard if already logged in
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -68,6 +95,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//renders signup page or redirect to dashboard if already logged in
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
