@@ -56,10 +56,11 @@ body.landing-page {
 
 /* header text */
 .header-text {
-    font-size: 3.5vw;
+    font-size: 90px;
     font-family: Fugaz none;
     text-align: center;
     background: -webkit-linear-gradient(rgba(248, 104, 0, 1), rgba(255, 230, 3, 1));
+	background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Fugaz One', sans-serif;
@@ -113,9 +114,7 @@ captcha verification on signup
 .login-text {
 	font-size: 20px;
 }
-.header-text {
-	font-size: 6vw;
-}
+
 
 /* media queries  */
 @media screen and (max-width: 700px) {
