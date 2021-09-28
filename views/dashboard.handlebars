@@ -17,6 +17,9 @@
     <div class="hobbiesTilte">Hobbies:</div>
     <div class="hobbies">{{user.hobbies}}</div>
     </div>
+    <div>
+      <a href="/dashboard/edit/user/{{user.id}}"class="edit-link">Edit Profile</a>
+    </div>
   </div>
 </section>
 
@@ -52,7 +55,7 @@
       {{#each posts as |post|}}
       <li class="dashboardMarginex">
         {{> post-info post}}
-        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        <a href="/dashboard/edit/post/{{post.id}}" class="edit-link">Edit post</a>
         </article>
       </li>
       {{/each}}

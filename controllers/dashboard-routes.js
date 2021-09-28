@@ -78,7 +78,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 // get all posts for edit posts
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/post/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
       'id',
@@ -145,6 +145,37 @@ router.get('/edit/:id', withAuth, (req, res) => {
       }
     })
   })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
+
+// get user for edit user info
+router.get('/edit/user/:id', withAuth, (req, res) => {
+  User.findByPk(req.params.id, {
+    attributes: [
+      'id',
+      'username',
+      'motto',
+      'dob',
+      'hometown',
+      'education',
+      'employment',
+      'relationship_status',
+      'hobbies'
+    ]
+  })
+    .then(dbUserData => {
+        const user = dbUserData.get({ plain: true });
+      if (user) {  
+        res.render('edit-profile', {
+          user,
+          loggedIn: true
+        });
+      } else {
+        res.status(404).end();
+      }
+    })
     .catch(err => {
       res.status(500).json(err);
     });
